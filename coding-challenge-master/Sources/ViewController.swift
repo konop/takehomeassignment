@@ -2,29 +2,17 @@
 
 import UIKit
 
-class PhotoCell: UICollectionViewCell {
-    @IBOutlet weak var photoImageView: UIImageView!
-    func setTaggedImage(thisImage: TaggedImage) {
-        let myURL = thisImage.url
-            ImageStore.shared.getImage(url: myURL, completion: {result in
-                switch result {
-                case .success(let image):
-                    self.photoImageView.image = image
-                case .failure( _): break
-                }
-            })
-    }
-}
-
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var imageAPI: InterviewAPI?
     var myImageSet: ImageSet?
-    var currentTag: String? = "Dog"
+    var currentTag: String?
     var currentFilteredImages: [TaggedImage]?
+    var myViewModel: CurrentImagesViewModel?
     
     @IBOutlet private weak var tagLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBAction private func refreshButtonTapped(_ sender: UIBarButtonItem){
+        getAPIData()
     }
     
     override func viewDidLoad() {
@@ -38,13 +26,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             case .success(let imageSet):
                 self.myImageSet = imageSet
                 self.filterAPIData()
-                
             case .failure( _): break
             }
         })
     }
     
     func filterAPIData() {
+        pickTag()
         if let tag = currentTag {
             currentFilteredImages = myImageSet?.sources.filter{ $0.tags.contains(tag.uppercased())}
             DispatchQueue.main.async {
@@ -54,13 +42,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
+    func pickTag() {
+        let listTags = myImageSet?.tags.filter { $0 != currentTag }
+        let newTag = listTags?.randomElement() ?? ""
+        currentTag = newTag
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         currentFilteredImages?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView
-            .dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotoCell
+            .dequeueReusableCell(withReuseIdentifier: PhotoCell.reuseIdentifier, for: indexPath) as! PhotoCell
         // Configure the cell
         if let taggedImage = currentFilteredImages?[indexPath.row] {
             cell.setTaggedImage(thisImage: taggedImage)

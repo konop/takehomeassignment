@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		744356BB2409D10D00146729 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744356BA2409D10D00146729 /* PhotoCell.swift */; };
+		744356BD2409D2A500146729 /* CurrentImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744356BC2409D2A500146729 /* CurrentImagesViewModel.swift */; };
 		BD55EF7C21780BFE0043F238 /* ImageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55EF7B21780BFE0043F238 /* ImageSet.swift */; };
 		BD92C959217F92D700A3963E /* CodableModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92C958217F92D700A3963E /* CodableModelTests.swift */; };
 		BD92C95B217F931B00A3963E /* ImageSetData.json in Resources */ = {isa = PBXBuildFile; fileRef = BD92C95A217F931B00A3963E /* ImageSetData.json */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		744356BA2409D10D00146729 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		744356BC2409D2A500146729 /* CurrentImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentImagesViewModel.swift; sourceTree = "<group>"; };
 		BD55EF7B21780BFE0043F238 /* ImageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSet.swift; sourceTree = "<group>"; };
 		BD92C958217F92D700A3963E /* CodableModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableModelTests.swift; sourceTree = "<group>"; };
 		BD92C95A217F931B00A3963E /* ImageSetData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ImageSetData.json; sourceTree = "<group>"; };
@@ -129,9 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				BDCBD184216D45F100589C64 /* Result.swift */,
+				744356BC2409D2A500146729 /* CurrentImagesViewModel.swift */,
 				BDCBD186216D465500589C64 /* NetworkingService.swift */,
 				BDCBD188216D469900589C64 /* InterviewAPI.swift */,
 				BDCBD18D216D47B900589C64 /* APIError.swift */,
+				744356BA2409D10D00146729 /* PhotoCell.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -257,11 +263,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDCBD185216D45F100589C64 /* Result.swift in Sources */,
+				744356BB2409D10D00146729 /* PhotoCell.swift in Sources */,
 				BD55EF7C21780BFE0043F238 /* ImageSet.swift in Sources */,
 				BDCBD166216D45B500589C64 /* ViewController.swift in Sources */,
 				BDCBD189216D469900589C64 /* InterviewAPI.swift in Sources */,
 				BDCBD191216D496000589C64 /* ImageStore.swift in Sources */,
 				BDCBD164216D45B500589C64 /* AppDelegate.swift in Sources */,
+				744356BD2409D2A500146729 /* CurrentImagesViewModel.swift in Sources */,
 				BDCBD187216D465500589C64 /* NetworkingService.swift in Sources */,
 				BDCBD18E216D47B900589C64 /* APIError.swift in Sources */,
 			);
