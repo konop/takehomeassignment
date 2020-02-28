@@ -1,0 +1,8 @@
+{
+    "tags": "Bicycle",
+    "sources": [
+        { "tags": ["BICYCLE", "HOUSE"], "url": "https://test123.com" },
+        { "tags": ["DOG"], "url": "https://test456.com" }
+    ]
+}
+
