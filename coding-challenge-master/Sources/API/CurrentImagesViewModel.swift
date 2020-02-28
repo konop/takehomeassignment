@@ -15,6 +15,7 @@ class CurrentImagesViewModel {
     var currentFilteredImages: [TaggedImage]?
     
     func getAPIData() {
+        imageAPI = InterviewAPI()
         imageAPI?.getImageSet(completion: {[unowned self] result in
             switch result {
             case .success(let imageSet):
@@ -29,10 +30,8 @@ class CurrentImagesViewModel {
         pickTag()
         if let tag = currentTag {
             currentFilteredImages = myImageSet?.sources.filter{ $0.tags.contains(tag.uppercased())}
-//            DispatchQueue.main.async {
-//                self.collectionView.reloadData()
-//                self.tagLabel.text = tag
-//            }
+            NotificationCenter.default.post(name: .imageViewModel, object: nil)
+
         }
     }
     
