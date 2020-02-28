@@ -33,7 +33,6 @@ class CurrentImagesViewModel {
         if let tag = currentTag {
             currentFilteredImages = myImageSet?.sources.filter{ $0.tags.contains(tag.uppercased())}
             NotificationCenter.default.post(name: .imageViewModel, object: nil)
-
         }
     }
     
