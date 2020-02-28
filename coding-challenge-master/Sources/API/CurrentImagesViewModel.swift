@@ -15,7 +15,9 @@ class CurrentImagesViewModel {
     var currentFilteredImages: [TaggedImage]?
     
     func getAPIData() {
-        imageAPI = InterviewAPI()
+        if imageAPI == nil {
+            imageAPI = InterviewAPI()
+        }
         imageAPI?.getImageSet(completion: {[unowned self] result in
             switch result {
             case .success(let imageSet):

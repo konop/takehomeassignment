@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		744356BB2409D10D00146729 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744356BA2409D10D00146729 /* PhotoCell.swift */; };
 		744356BD2409D2A500146729 /* CurrentImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744356BC2409D2A500146729 /* CurrentImagesViewModel.swift */; };
+		744356BF2409DB1800146729 /* CurentImagesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744356BE2409DB1800146729 /* CurentImagesViewModelTests.swift */; };
 		BD55EF7C21780BFE0043F238 /* ImageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD55EF7B21780BFE0043F238 /* ImageSet.swift */; };
 		BD92C959217F92D700A3963E /* CodableModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92C958217F92D700A3963E /* CodableModelTests.swift */; };
 		BD92C95B217F931B00A3963E /* ImageSetData.json in Resources */ = {isa = PBXBuildFile; fileRef = BD92C95A217F931B00A3963E /* ImageSetData.json */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		744356BA2409D10D00146729 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		744356BC2409D2A500146729 /* CurrentImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentImagesViewModel.swift; sourceTree = "<group>"; };
+		744356BE2409DB1800146729 /* CurentImagesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurentImagesViewModelTests.swift; sourceTree = "<group>"; };
 		BD55EF7B21780BFE0043F238 /* ImageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSet.swift; sourceTree = "<group>"; };
 		BD92C958217F92D700A3963E /* CodableModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableModelTests.swift; sourceTree = "<group>"; };
 		BD92C95A217F931B00A3963E /* ImageSetData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ImageSetData.json; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				BDCBD17A216D45B800589C64 /* Info.plist */,
 				BDB85660217E959C0021E58A /* InterviewAPITests.swift */,
 				BD92C958217F92D700A3963E /* CodableModelTests.swift */,
+				744356BE2409DB1800146729 /* CurentImagesViewModelTests.swift */,
 				BD92C95A217F931B00A3963E /* ImageSetData.json */,
 				BD92C95C217F977D00A3963E /* ImageSetInvalidData.json */,
 			);
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD92C959217F92D700A3963E /* CodableModelTests.swift in Sources */,
+				744356BF2409DB1800146729 /* CurentImagesViewModelTests.swift in Sources */,
 				BDB85661217E959C0021E58A /* InterviewAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,7 +476,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZQ96LVQ9C;
+				DEVELOPMENT_TEAM = 9P5S784YV9;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -493,7 +497,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QZQ96LVQ9C;
+				DEVELOPMENT_TEAM = 9P5S784YV9;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

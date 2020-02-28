@@ -39,6 +39,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 }
 
+//Required for notifications.  Using notifications instead of reactiveswift because of time restrictions but functions in a similar way
 extension Notification.Name {
     static let imageViewModel = Notification.Name("imageViewModel")
 }
